@@ -4,6 +4,11 @@
 ZaikaZone is a visually appealing and responsive food ordering web application that allows users to browse local restaurants, explore dishes, and place online orders seamlessly.
 
 ---
+## 🔗 Live Website
+
+👉 [Click here to visit ZaikaZone Live](https://zaikazone.netlify.app)
+
+---
 
 ## 🚀 Features
 
