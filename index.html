@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZaikaZone - Order Local Food Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="Style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a2d4a489-f1e0-42c5-9d02-93ab451fff03.png" alt="ZaikaZone logo" class="rounded-full w-12 h-12 object-cover">
+        <h1 class="text-2xl font-bold text-orange-600">ZaikaZone</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="text-gray-700 hover:text-orange-600">Home</a>
+        <a href="#restaurants" class="text-gray-700 hover:text-orange-600">Restaurants</a>
+        <a href="#how-it-works" class="text-gray-700 hover:text-orange-600">How It Works</a>
+        <a href="#about" class="text-gray-700 hover:text-orange-600">About</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <button id="cart-btn" class="text-gray-700 hover:text-orange-600">
+            <i class="fas fa-shopping-cart text-xl"></i>
+          </button>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-orange-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+        </div>
+        <button class="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-700 transition">Sign In</button>
+        <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden bg-white border-t md:hidden">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+        <a href="#home" class="py-2 text-gray-700 hover:text-orange-600">Home</a>
+        <a href="#restaurants" class="py-2 text-gray-700 hover:text-orange-600">Restaurants</a>
+        <a href="#how-it-works" class="py-2 text-gray-700 hover:text-orange-600">How It Works</a>
+        <a href="#about" class="py-2 text-gray-700 hover:text-orange-600">About</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-r from-orange-50 to-yellow-50 py-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Order From Top Local Restaurants</h2>
+        <p class="text-lg text-gray-600 mb-6">Order from the best local restaurants delivering to your doorstep. Authentic tastes, just a click away!</p>
+        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+          <div class="relative flex-grow">
+            <input type="text" placeholder="Enter your delivery address" class="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <button class="absolute right-2 top-2 bg-orange-600 text-white p-1 rounded-full">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <button class="bg-orange-600 text-white px-6 py-3 rounded-full hover:bg-orange-700 transition whitespace-nowrap">Find Food</button>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74963d0b-4d1e-4434-b48c-22429eb24747.png" alt="Delicious assortment of local dishes including curries, breads and desserts artfully arranged on a table" class="rounded-lg shadow-lg max-w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Categories -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8 text-center">Popular Cuisines</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-orange-50 cursor-pointer transition">
+          <div class="bg-white rounded-full p-3 w-20 h-20 mx-auto mb-2 flex items-center justify-center">
+            <i class="fas fa-hamburger text-3xl text-orange-600"></i>
+          </div>
+          <span class="font-medium">Burgers</span>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-orange-50 cursor-pointer transition">
+          <div class="bg-white rounded-full p-3 w-20 h-20 mx-auto mb-2 flex items-center justify-center">
+            <i class="fas fa-pizza-slice text-3xl text-orange-600"></i>
+          </div>
+          <span class="font-medium">Pizza</span>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-orange-50 cursor-pointer transition">
+          <div class="bg-white rounded-full p-3 w-20 h-20 mx-auto mb-2 flex items-center justify-center">
+            <i class="fas fa-drumstick-bite text-3xl text-orange-600"></i>
+          </div>
+          <span class="font-medium">Chicken</span>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-orange-50 cursor-pointer transition">
+          <div class="bg-white rounded-full p-3 w-20 h-20 mx-auto mb-2 flex items-center justify-center">
+            <i class="fas fa-utensils text-3xl text-orange-600"></i>
+          </div>
+          <span class="font-medium">Local Cuisine</span>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-orange-50 cursor-pointer transition">
+          <div class="bg-white rounded-full p-3 w-20 h-20 mx-auto mb-2 flex items-center justify-center">
+            <i class="fas fa-ice-cream text-3xl text-orange-600"></i>
+          </div>
+          <span class="font-medium">Desserts</span>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4 text-center hover:bg-orange-50 cursor-pointer transition">
+          <div class="bg-white rounded-full p-3 w-20 h-20 mx-auto mb-2 flex items-center justify-center">
+            <i class="fas fa-glass-whiskey text-3xl text-orange-600"></i>
+          </div>
+          <span class="font-medium">Drinks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Restaurants -->
+  <section id="restaurants" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold">Best Local Restaurants</h2>
+        <a href="#" class="text-orange-600 hover:underline">View all</a>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="restaurants-list">
+        <!-- Restaurant cards will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8 text-center">How ZaikaZone Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-orange-600 text-3xl font-bold">1</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Choose Your Restaurant</h3>
+          <p class="text-gray-600">Browse through hundreds of restaurants in your area offering delicious local food.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-orange-600 text-3xl font-bold">2</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Customize Your Order</h3>
+          <p class="text-gray-600">Select your favorite dishes and customize them to your taste.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-orange-600 text-3xl font-bold">3</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+          <p class="text-gray-600">Track your order in real-time as we deliver it fast to your doorstep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Dishes -->
+  <section class="py-12 bg-gradient-to-r from-orange-50 to-yellow-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8 text-center">Must-Try Local Dishes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="food-items">
+        <!-- Food items will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-8 text-center">What Our Customers Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <div class="flex items-center mb-4">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b450277d-fbaf-40ef-803d-ffef4de2f891.png" alt="Happy customer Sarah smiling" class="rounded-full w-16 h-16 mr-4">
+          <div>
+            <h4 class="font-bold text-lg">Sarah J.</h4>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600">"The best food delivery service in town! I love how quickly I get my favorite local dishes delivered."</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <div class="flex items-center mb-4">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d97b25f0-c451-48d3-be1f-3de23c7c3801.png" alt="Customer Raj looking satisfied" class="rounded-full w-16 h-16 mr-4">
+          <div>
+            <h4 class="font-bold text-lg">Raj P.</h4>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600">"Discovering local restaurants through ZaikaZone has been a game-changer for my family's dinner routine."</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <div class="flex items-center mb-4">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/59392204-645f-4207-b3c9-05ad18873e3c.png" alt="Customer Mia holding a takeout box" class="rounded-full w-16 h-16 mr-4">
+          <div>
+            <h4 class="font-bold text-lg">Mia K.</h4>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600">"Their packaging is eco-friendly and the food always arrives hot and fresh. 10/10 would recommend!"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-orange-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Hungry? Order Now!</h2>
+      <p class="text-xl mb-8">Download our app for faster ordering and exclusive offers</p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <button class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition flex items-center justify-center">
+          <i class="fab fa-apple text-2xl mr-2"></i>
+          <div class="text-left">
+            <div class="text-xs">Download on the</div>
+            <div class="font-bold">App Store</div>
+          </div>
+        </button>
+        <button class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition flex items-center justify-center">
+          <i class="fab fa-google-play text-2xl mr-2"></i>
+          <div class="text-left">
+            <div class="text-xs">Get it on</div>
+            <div class="font-bold">Google Play</div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e330daeb-d770-4993-9bb5-fc3641d2ce77.png" alt="ZaikaZone logo" class="rounded-full w-12 h-12 object-cover">
+            <h3 class="text-xl font-bold">ZaikaZone</h3>
+          </div>
+          <p class="text-gray-400">Discover and order from the best local restaurants in your city.</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">For Foodies</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Code of Conduct</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Community</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Verified Users</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Blogger Help</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">For Restaurants</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Add Restaurant</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Business App</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Restaurant Widgets</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Products for Businesses</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">© 2025 ZaikaZone. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar -->
+  <div id="cart-sidebar" class="fixed top-0 right-0 w-full sm:w-96 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+    <div class="flex justify-between items-center p-4 border-b">
+      <h3 class="text-xl font-bold">Your Order</h3>
+      <button id="close-cart" class="text-gray-500 hover:text-gray-700">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="p-4 overflow-y-auto h-3/4" id="cart-items">
+      <!-- Cart items will be added here -->
+      <div id="empty-cart" class="text-center py-8">
+        <i class="fas fa-shopping-cart text-4xl text-gray-300 mb-4"></i>
+        <p class="text-gray-500">Your cart is empty</p>
+        <button class="mt-4 bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-700">Browse Restaurants</button>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 p-4 border-t bg-white">
+      <div class="flex justify-between mb-4">
+        <span class="font-semibold">Subtotal</span>
+        <span id="cart-subtotal">₹0.00</span>
+      </div>
+      <div class="flex justify-between mb-4">
+        <span class="font-semibold">Delivery Fee</span>
+        <span id="delivery-fee">₹0.00</span>
+      </div>
+      <div class="flex justify-between mb-4 text-lg font-bold">
+        <span>Total</span>
+        <span id="cart-total">₹0.00</span>
+      </div>
+      <button id="checkout-btn" class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700" disabled>Checkout</button>
+    </div>
+  </div>
+
+  <!-- Food Item Modal -->
+  <div id="food-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg w-full max-w-md max-h-screen overflow-y-auto">
+      <div class="relative">
+        <img id="modal-food-image" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5003189d-b06e-4405-afae-27a3b9bbaf81.png" alt="Food item" class="w-full h-64 object-cover rounded-t-lg">
+        <button id="close-modal" class="absolute top-4 right-4 bg-white rounded-full p-2">
+          <i class="fas fa-times text-gray-700"></i>
+        </button>
+      </div>
+      <div class="p-6">
+        <h3 id="modal-food-name" class="text-2xl font-bold mb-2"></h3>
+        <p id="modal-food-restaurant" class="text-gray-600 mb-4"></p>
+        <p id="modal-food-description" class="text-gray-700 mb-4"></p>
+        <div class="flex justify-between items-center mb-6">
+          <span id="modal-food-price" class="text-xl font-bold text-orange-600"></span>
+          <div class="flex items-center">
+            <button id="decrease-qty" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-l-lg">-</button>
+            <span id="food-qty" class="bg-gray-100 px-4 py-1">1</span>
+            <button id="increase-qty" class="bg-gray-200 text-gray-700 px-3 py-1 rounded-r-lg">+</button>
+          </div>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-semibold mb-3">Special Instructions</h4>
+          <textarea placeholder="Add special instructions here..." class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+        </div>
+        <button id="add-to-cart-btn" class="w-full bg-orange-600 text-white py-3 rounded-lg hover:bg-orange-700">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <script src="Script.js"></script>
+</body>
+</html>
