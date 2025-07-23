@@ -35,7 +35,23 @@ ZaikaZone is a visually appealing and responsive food ordering web application t
 
 ## 🖼️ Screenshots
 
-> You can add your screenshots here after uploading to GitHub or any image host.
+## 📸 Screenshots
+
+### 🏠 Homepage
+![Homepage](./homepage.png)
+
+### 🍽️ Restaurant Listings
+![Restaurant Listings](./restaurant.png)
+
+### 🍛 Food Menu
+![Food Menu](./foodmenu.png)
+
+### 🛒 Shopping Cart
+![Cart](./cart.png)
+
+### 📱 Responsive View
+![Responsive View](./responsive.png)
+
 
 ---
 
