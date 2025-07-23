@@ -53,4 +53,4 @@ ZaikaZone is a visually appealing and responsive food ordering web application t
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/zaikazone.git
+   git clone https://github.com/alhaj22/zaikazone.git
